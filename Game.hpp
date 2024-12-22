@@ -7,6 +7,7 @@
 #include <iostream>
 #include <chrono>
 #include "Render.hpp"
+#include "renderer_3d.hpp"
 
 class Game {
 
@@ -27,6 +28,8 @@ class Game {
 		Render* renderer = new Render();
 
 		bool running = true;
+
+		Renderer3D::mesh cube;
 
 		int x = 0;
 

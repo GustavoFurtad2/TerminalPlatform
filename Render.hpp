@@ -10,7 +10,7 @@
 #include <chrono>
 
 #define SCREEN_WIDTH 140
-#define SCREEN_HEIGHT 40
+#define SCREEN_HEIGHT 105
 #define SCREEN_PIXELS SCREEN_WIDTH * SCREEN_HEIGHT
 
 class Render {
@@ -24,6 +24,14 @@ class Render {
 		void clearScreen();
 
 		void drawChar(int x, int y, wchar_t c);
+
+		int getScreenWidth() {
+			return SCREEN_WIDTH;
+		}
+
+		int getScreenHeight() {
+			return SCREEN_HEIGHT;
+		}
 
 	private:
 
