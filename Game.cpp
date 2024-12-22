@@ -1,7 +1,30 @@
 ﻿#include "Game.hpp"
-#include "Graphics.hpp"
+#include "Renderer_2d.hpp"
 
-Game::Game() {}
+Game::Game() {
+
+	cube.tris = {
+
+		{ 0.0f, 0.0f, 0.0f,    0.0f, 1.0f, 0.0f,    1.0f, 1.0f, 0.0f },
+		{ 0.0f, 0.0f, 0.0f,    1.0f, 1.0f, 0.0f,    1.0f, 0.0f, 0.0f },
+
+		{ 1.0f, 0.0f, 0.0f,    1.0f, 1.0f, 0.0f,    1.0f, 1.0f, 1.0f },
+		{ 1.0f, 0.0f, 0.0f,    1.0f, 1.0f, 1.0f,    1.0f, 0.0f, 1.0f },
+
+		{ 1.0f, 0.0f, 1.0f,    1.0f, 1.0f, 1.0f,    0.0f, 1.0f, 1.0f },
+		{ 1.0f, 0.0f, 1.0f,    0.0f, 1.0f, 1.0f,    0.0f, 0.0f, 1.0f },
+
+		{ 0.0f, 0.0f, 1.0f,    0.0f, 1.0f, 1.0f,    0.0f, 1.0f, 0.0f },
+		{ 0.0f, 0.0f, 1.0f,    0.0f, 1.0f, 0.0f,    0.0f, 0.0f, 0.0f },
+
+		{ 0.0f, 1.0f, 0.0f,    0.0f, 1.0f, 1.0f,    1.0f, 1.0f, 1.0f },
+		{ 0.0f, 1.0f, 0.0f,    1.0f, 1.0f, 1.0f,    1.0f, 1.0f, 0.0f },
+
+		{ 1.0f, 0.0f, 1.0f,    0.0f, 0.0f, 1.0f,    0.0f, 0.0f, 0.0f },
+		{ 1.0f, 0.0f, 1.0f,    0.0f, 0.0f, 0.0f,    1.0f, 0.0f, 0.0f },
+	};
+
+}
 
 void Game::quit() {
 
@@ -12,11 +35,15 @@ void Game::render() {
 
 	renderer->clearScreen();
 
-	Graphics::drawRect(renderer, L'█', 0, 0, 5, 5);
+	//Renderer2D::drawRect(renderer, L'█', 0, 0, 5, 5);
 
 	wchar_t text[] = L"Teste";
 
-	Graphics::drawText(renderer, text, 5, 10);
+	//Renderer2D::drawText(renderer, text, 5, 10);
+
+	Renderer3D::updateElapsedTime();
+
+	Renderer3D::drawMesh(renderer, cube);
 
 	renderer->draw();
 }

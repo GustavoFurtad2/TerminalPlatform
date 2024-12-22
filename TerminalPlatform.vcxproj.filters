@@ -19,6 +19,18 @@
     <Filter Include="Arquivos de Origem\Graphics">
       <UniqueIdentifier>{e2c2f20f-b712-4c06-bd6d-a015bcc05687}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Graphics\2d">
+      <UniqueIdentifier>{3c8dd5a0-3531-4de2-aa74-9fd6fc5597a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Graphics\2d">
+      <UniqueIdentifier>{07b1377e-50f4-443e-b84d-82153f86099d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Graphics\3d">
+      <UniqueIdentifier>{65811dc2-63be-48d6-bf15-5fac28bc679b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Graphics\3d">
+      <UniqueIdentifier>{f5e665ae-14c8-47c7-907f-480101f410c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -30,8 +42,11 @@
     <ClCompile Include="Render.cpp">
       <Filter>Arquivos de Origem\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Graphics.cpp">
-      <Filter>Arquivos de Origem\Graphics</Filter>
+    <ClCompile Include="Renderer_2d.cpp">
+      <Filter>Arquivos de Origem\Graphics\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer_3d.cpp">
+      <Filter>Arquivos de Origem\Graphics\3d</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -41,8 +56,11 @@
     <ClInclude Include="Render.hpp">
       <Filter>Arquivos de Cabeçalho\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="Graphics.hpp">
-      <Filter>Arquivos de Cabeçalho\Graphics</Filter>
+    <ClInclude Include="Renderer_2d.hpp">
+      <Filter>Arquivos de Cabeçalho\Graphics\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer_3d.hpp">
+      <Filter>Arquivos de Cabeçalho\Graphics\3d</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
